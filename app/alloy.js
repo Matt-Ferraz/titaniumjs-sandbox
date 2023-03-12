@@ -9,3 +9,17 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+Alloy.Globals.openWindowModal = (screen, params) => {
+  params = params || {};
+  let options = { modal: true, forceModal: params.forceModal || false }
+  if (params.hasNavigation == true) {
+    let Navigation = require('Navigation');
+    let navigation = new Navigation();
+    navigation.openWindow(screen, params, options);
+  } else {
+    let controller = Alloy.createController(screen, params);
+    let currentWindow = null;
+    currentWindow = controller.getView();
+    currentWindow.open(options);
+  }
+};
