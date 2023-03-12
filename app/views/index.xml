@@ -1,19 +1,5 @@
 <Alloy>
   <Window id="win">
-    <ListView id="listView" defaultItemTemplate="template">
-      <Templates>
-        <ItemTemplate name="template">
-          <View class="listItemContainer">
-            <Label class="listItemTitle" bindId="title" />
-            <Label class="listItemSubtitle" bindId="subtitle" />
-          </View>
-        </ItemTemplate>
-      </Templates>
-      <ListSection id="listSection">
-        <ListItem title="Item 1" subtitle="Subtitle 1" />
-        <ListItem title="Item 2" subtitle="Subtitle 2" />
-        <ListItem title="Item 3" subtitle="Subtitle 3" />
-      </ListSection>
-    </ListView>
+    <Button>ABRIR MODAL</Button>
   </Window>
 </Alloy>
